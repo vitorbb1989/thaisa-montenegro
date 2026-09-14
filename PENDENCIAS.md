@@ -14,3 +14,4 @@ Este pacote está tecnicamente completo e passa em `scripts/validate.sh`. Os doi
 - ~~Foto do hero~~ — recebida e integrada (`assets/thaisa-hero.webp`), com recorte 3:4 e imagem Open Graph gerada a partir dela.
 - ~~Domínio de produção~~ — confirmado: `lp.thaisamontenegro.com.br`, aplicado em todo o código.
 - ~~Servidor de destino~~ — confirmado: mesma VPS (Docker Swarm + Traefik, rede `minha_rede`, IP `185.182.184.175`), DNS já apontando corretamente.
+- ~~Telefone institucional~~ — o cartão CNPJ traz um único telefone, (81) 8482-2268, que é o mesmo número do WhatsApp sem o 9º dígito de celular. O site tinha um segundo número, (81) 9419-7583, que não constava em nenhum documento e foi removido/substituído por (81) 98482-2268 em todos os pontos (JSON-LD, rodapé, política de privacidade, termos de uso).
