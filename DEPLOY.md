@@ -1,4 +1,4 @@
-# Deploy — Espaço Thaisa Montenegro
+# Deploy — Thaisa Montenegro
 
 Domínio de produção (confirmado, DNS apontando para o servidor): `https://lp.thaisamontenegro.com.br`
 

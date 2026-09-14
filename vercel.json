@@ -21,7 +21,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; script-src 'self' 'sha256-S1c5+ZmsSjg6j8Ojp0gzD1BOVFAMl/WpZbPZYcfAQw8='; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+          "value": "default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; script-src 'self' 'sha256-O1Kv/U4/+mH/LKPOLmsuYNwOvf4oB0xP7c5l6zeANJg='; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
         },
         {
           "key": "Strict-Transport-Security",

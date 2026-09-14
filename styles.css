@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Espaço Thaisa Montenegro — design system
+   Thaisa Montenegro — design system
    Paleta: pedra quente + tinta profunda + latão envelhecido
    Tipografia: Fraunces (display) + Work Sans (texto/UI)
    ========================================================================== */
@@ -362,6 +362,38 @@ p:last-child { margin-bottom: 0; }
 
 .about-body p { color: var(--ink-soft); }
 .about-body p + p { margin-top: 1em; }
+
+.about-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+@media (min-width: 700px) {
+  .about-gallery { grid-template-columns: 1fr 1fr; max-width: 620px; }
+}
+
+.framed-photo {
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  padding: 10px;
+  background: var(--surface);
+}
+
+.framed-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.framed-photo figcaption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+}
 
 /* ---------- services (menu style list) ---------- */
 .menu-list {

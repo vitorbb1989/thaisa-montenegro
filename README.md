@@ -1,18 +1,18 @@
-# ESPAÇO THAISA MONTENEGRO
+# THAISA MONTENEGRO
 
-Site institucional estático de **Thaisa Marques Montenegro Maia** (CNPJ 24.783.727/0001-50), nome fantasia assumido como "Espaço Thaisa Montenegro" — estética facial e corporal no Riomar Trade Center, Pina, Recife/PE.
+Site institucional estático de **Thaisa Montenegro** (nome fantasia confirmado — bate com o letreiro físico na recepção do espaço), CNPJ 24.783.727/0001-50 — estética facial e corporal no Riomar Trade Center, Pina, Recife/PE.
 
 Este site foi construído no mesmo padrão de outro projeto da casa (site institucional para verificação de negócio no Meta Business): demonstrar consistência cadastral (razão social, CNPJ e endereço idênticos ao CNPJ) e presença digital, com política de privacidade e termos de uso publicados. **Este site não garante, por si só, aprovação em processos de verificação empresarial da Meta ou de qualquer outra plataforma** — a aprovação depende também da documentação enviada e do cadastro da empresa nessas plataformas.
 
 ## ⚠️ Pendências antes de publicar (ver PENDENCIAS.md)
 
-Este pacote está completo e validado, mas foi montado com dados que precisam de confirmação: nome fantasia, domínio de produção e servidor de destino. Ver `PENDENCIAS.md` para a lista exata.
+Domínio, servidor, nome fantasia, telefone e fotos já estão confirmados. Resta uma divergência bloqueante sobre a razão social (cartão CNPJ diz um nome, uma mensagem depois disse outro) e um item de conteúdo (nomes reais dos procedimentos). Ver `PENDENCIAS.md` para o detalhe.
 
 ## Dados do projeto
 
-- **Nome:** Espaço Thaisa Montenegro
-- **Razão social:** Thaisa Marques Montenegro Maia — CNPJ 24.783.727/0001-50
-- **Domínio de produção (placeholder, a confirmar):** `lp.thaisamontenegro.com.br`
+- **Nome:** Thaisa Montenegro
+- **Razão social:** conforme o cartão CNPJ, **Thaisa Marques Montenegro Maia** — CNPJ 24.783.727/0001-50. **Divergência em aberto:** ver `PENDENCIAS.md`.
+- **Domínio de produção:** `lp.thaisamontenegro.com.br` (já publicado)
 - **Tecnologia:** HTML, CSS e JavaScript estáticos — sem framework, sem processo de build.
 
 ## Estrutura de arquivos
@@ -42,9 +42,11 @@ Este pacote está completo e validado, mas foi montado com dados que precisam de
 │   ├── validate.sh
 │   └── rollback.sh
 └── assets/
-    ├── logo.svg          (monograma "TM", vetor — usado também como favicon)
-    ├── thaisa-hero.webp  (foto enviada em 10/09/2026, recortada 3:4 para o hero)
-    └── og-image.png      (1200×630, gerado a partir da mesma foto, para preview em redes sociais)
+    ├── logo.svg              (monograma "TM", vetor — usado também como favicon)
+    ├── thaisa-hero.webp      (foto enviada em 10/09/2026, recortada 3:4 para o hero)
+    ├── og-image.png          (1200×630, gerado a partir da foto do hero, para preview em redes sociais)
+    ├── thaisa-sobre.webp     (foto enviada em 14/09/2026, retrato na seção "Sobre")
+    └── espaco-recepcao.webp  (foto enviada em 14/09/2026, recepção do espaço com o letreiro "Thaisa Montenegro")
 ```
 
 ## Decisões de design
@@ -52,7 +54,7 @@ Este pacote está completo e validado, mas foi montado com dados que precisam de
 - **Paleta:** pedra quente (`#EDE7DD`), tinta profunda (`#1E1912`), latão envelhecido (`#A9803D`) e terracota muted (`#7A3F2C`) — evita o clichê "cream + terracota vivo" e a estética de card SaaS genérica.
 - **Tipografia:** Fraunces (display, serif editorial) + Work Sans (texto/UI), carregadas via Google Fonts. Sem elas, o navegador cai em serif/sans do sistema — o layout não quebra, só perde personalidade.
 - **Layout:** editorial, alinhado à esquerda, seções separadas por hairlines — não por cards com sombra. "Áreas de atuação" é tratado como menu (lista com hairline), não como grade de cards.
-- **Foto:** a foto enviada em 10/09/2026 é o elemento hero principal, com moldura fina e um selo do monograma sobreposto. O emblema vetorial (monograma "TM") ficou como marca (favicon, logo do header, selo sobre a foto) — não mais como substituto de foto no hero.
+- **Foto:** a foto enviada em 10/09/2026 é o elemento hero principal, com moldura fina e um selo do monograma sobreposto. O emblema vetorial (monograma "TM") ficou como marca (favicon, logo do header, selo sobre a foto) — não mais como substituto de foto no hero. As duas fotos enviadas em 14/09/2026 (retrato e recepção) entraram na seção "Sobre", com a mesma moldura fina, sem selo.
 - **Copy de "Áreas de atuação":** está no nível de categoria (estética facial / estética corporal / formação e mentoria), deduzido dos CNAEs do CNPJ (96.02-5-02 e 85.99-6-04). **Precisa ser substituída pelos nomes reais dos procedimentos/serviços dela** antes de publicar — não inventei nomes de procedimentos específicos.
 
 ## Execução local
