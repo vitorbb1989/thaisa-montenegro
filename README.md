@@ -4,14 +4,14 @@ Site institucional estático de **Thaisa Montenegro** (nome fantasia confirmado 
 
 Este site foi construído no mesmo padrão de outro projeto da casa (site institucional para verificação de negócio no Meta Business): demonstrar consistência cadastral (razão social, CNPJ e endereço idênticos ao CNPJ) e presença digital, com política de privacidade e termos de uso publicados. **Este site não garante, por si só, aprovação em processos de verificação empresarial da Meta ou de qualquer outra plataforma** — a aprovação depende também da documentação enviada e do cadastro da empresa nessas plataformas.
 
-## ⚠️ Pendências antes de publicar (ver PENDENCIAS.md)
+## Pendências (ver PENDENCIAS.md)
 
-Domínio, servidor, nome fantasia, telefone e fotos já estão confirmados. Resta uma divergência bloqueante sobre a razão social (cartão CNPJ diz um nome, uma mensagem depois disse outro) e um item de conteúdo (nomes reais dos procedimentos). Ver `PENDENCIAS.md` para o detalhe.
+Domínio, servidor, nome fantasia, razão social, telefone e fotos já estão confirmados e publicados. Resta apenas um item de conteúdo (nomes reais dos procedimentos em "Áreas de atuação"). Ver `PENDENCIAS.md` para o detalhe.
 
 ## Dados do projeto
 
 - **Nome:** Thaisa Montenegro
-- **Razão social:** conforme o cartão CNPJ, **Thaisa Marques Montenegro Maia** — CNPJ 24.783.727/0001-50. **Divergência em aberto:** ver `PENDENCIAS.md`.
+- **Razão social:** Thaisa Marques Montenegro Maia — CNPJ 24.783.727/0001-50
 - **Domínio de produção:** `lp.thaisamontenegro.com.br` (já publicado)
 - **Tecnologia:** HTML, CSS e JavaScript estáticos — sem framework, sem processo de build.
 
