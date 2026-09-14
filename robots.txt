@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://espacothaisamontenegro.com.br/sitemap.xml
+Sitemap: https://lp.thaisamontenegro.com.br/sitemap.xml

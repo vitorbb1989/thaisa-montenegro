@@ -51,7 +51,7 @@ fi
 
 # 4. Domínio de produção presente nos pontos obrigatórios
 for f in index.html politica-de-privacidade.html termos-de-uso.html robots.txt sitemap.xml; do
-  if grep -q "espacothaisamontenegro.com.br" "$f"; then
+  if grep -q "lp.thaisamontenegro.com.br" "$f"; then
     ok "domínio de produção presente em $f"
   else
     err "domínio de produção ausente em $f"
@@ -151,7 +151,7 @@ if command -v python3 >/dev/null 2>&1; then
 fi
 
 # 10. robots.txt aponta para o sitemap correto
-if grep -q "^Sitemap: https://espacothaisamontenegro.com.br/sitemap.xml$" robots.txt; then
+if grep -q "^Sitemap: https://lp.thaisamontenegro.com.br/sitemap.xml$" robots.txt; then
   ok "robots.txt aponta para o sitemap correto"
 else
   err "robots.txt não aponta para o sitemap correto"

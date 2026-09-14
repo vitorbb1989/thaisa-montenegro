@@ -1,6 +1,6 @@
 # Deploy — Espaço Thaisa Montenegro
 
-Domínio de produção (placeholder, confirmar — ver PENDENCIAS.md): `https://espacothaisamontenegro.com.br`
+Domínio de produção (confirmado, DNS apontando para o servidor): `https://lp.thaisamontenegro.com.br`
 
 ## Pré-requisitos no servidor
 
@@ -8,7 +8,7 @@ Domínio de produção (placeholder, confirmar — ver PENDENCIAS.md): `https://
 - Traefik v3 já implantado e operacional, gerenciando `entrypoints`, `certresolver` e a rede compartilhada.
 - Rede externa `minha_rede` já criada e utilizada pelo Traefik.
 
-Estes valores foram assumidos como iguais aos de outros sites estáticos já rodando na infraestrutura da casa (confirmado anteriormente via `docker service inspect traefik_traefik --pretty` em outro projeto). **Confirme antes do primeiro deploy que este site vai para a mesma VPS:**
+Estes valores foram confirmados nesta própria VPS via `docker info`, `docker network ls` e `docker service inspect traefik_traefik --pretty` antes do primeiro deploy:
 
 ```bash
 docker info
@@ -19,13 +19,13 @@ docker network inspect minha_rede
 docker service inspect <serviço-do-traefik> --pretty
 ```
 
-| Item | Valor assumido |
+| Item | Valor confirmado |
 |---|---|
 | Rede Traefik | `minha_rede` |
 | EntryPoint HTTPS | `websecure` (porta 443; `web`/porta 80 redireciona) |
 | Certresolver | `letsencryptresolver` |
 | Label de rede | `traefik.swarm.network` (provider `--providers.swarm=true`) |
-| IP do servidor | `185.182.184.175` (mesmo de outros sites estáticos da casa — confirmar) |
+| IP do servidor | `185.182.184.175` |
 
 Os labels em `docker-stack.yml` já refletem esses valores. Não altere a configuração global do Traefik para se adequar a este projeto.
 
@@ -74,27 +74,27 @@ docker service inspect thaisamontenegro_web --pretty
 docker service logs --tail 100 thaisamontenegro_web
 ```
 
-Confirme: serviço 1/1, sem loop de reinicialização, imagem e tag corretas, rede `minha_rede`, router `thaisamontenegro` com `Host(espacothaisamontenegro.com.br)`.
+Confirme: serviço 1/1, sem loop de reinicialização, imagem e tag corretas, rede `minha_rede`, router `thaisamontenegro` com `Host(lp.thaisamontenegro.com.br)`.
 
 ## Testes públicos
 
 ```bash
-curl -I https://espacothaisamontenegro.com.br/
-curl -I https://espacothaisamontenegro.com.br/politica-de-privacidade.html
-curl -I https://espacothaisamontenegro.com.br/termos-de-uso.html
-curl -I https://espacothaisamontenegro.com.br/robots.txt
-curl -I https://espacothaisamontenegro.com.br/sitemap.xml
-curl -I https://espacothaisamontenegro.com.br/assets/logo.svg
-curl -I https://espacothaisamontenegro.com.br/assets/thaisa-hero.webp
-curl -I https://espacothaisamontenegro.com.br/assets/og-image.png
-curl -I https://espacothaisamontenegro.com.br/rota-inexistente-teste
+curl -I https://lp.thaisamontenegro.com.br/
+curl -I https://lp.thaisamontenegro.com.br/politica-de-privacidade.html
+curl -I https://lp.thaisamontenegro.com.br/termos-de-uso.html
+curl -I https://lp.thaisamontenegro.com.br/robots.txt
+curl -I https://lp.thaisamontenegro.com.br/sitemap.xml
+curl -I https://lp.thaisamontenegro.com.br/assets/logo.svg
+curl -I https://lp.thaisamontenegro.com.br/assets/thaisa-hero.webp
+curl -I https://lp.thaisamontenegro.com.br/assets/og-image.png
+curl -I https://lp.thaisamontenegro.com.br/rota-inexistente-teste
 ```
 
 A última chamada deve retornar `404`. Verifique também:
 
 ```bash
-curl -s https://espacothaisamontenegro.com.br/ | grep -F "espacothaisamontenegro.com.br"
-curl -s https://espacothaisamontenegro.com.br/ | grep -Ei "taisa|thaissa|thaiza"
+curl -s https://lp.thaisamontenegro.com.br/ | grep -F "lp.thaisamontenegro.com.br"
+curl -s https://lp.thaisamontenegro.com.br/ | grep -Ei "taisa|thaissa|thaiza"
 ```
 
 A segunda busca não deve retornar nenhuma linha (grafias incorretas do nome).
@@ -104,22 +104,10 @@ A segunda busca não deve retornar nenhuma linha (grafias incorretas do nome).
 Antes do deploy público, valide:
 
 ```bash
-dig +short espacothaisamontenegro.com.br A
+dig +short lp.thaisamontenegro.com.br A
 ```
 
-O resultado deve ser o IP do servidor de destino (assumido `185.182.184.175` — confirmar). Se ainda não apontar:
-
-1. Finalize o código, faça commit e push.
-2. **Não** force emissão repetida de certificado.
-3. **Não** reinicie o Traefik.
-4. **Não** realize o deploy público.
-5. Informe **DNS PENDENTE** e o registro necessário:
-
-```
-Tipo: A
-Host: espacothaisamontenegro (ou @, conforme o domínio final)
-Destino: <IP do servidor de destino>
-```
+O resultado deve ser `185.182.184.175`. Confirmado em 2026-09-14 — o registro A de `lp.thaisamontenegro.com.br` já aponta para o servidor.
 
 ## Rollback
 

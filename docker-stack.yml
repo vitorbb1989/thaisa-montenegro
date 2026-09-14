@@ -15,7 +15,7 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.swarm.network=minha_rede"
-        - "traefik.http.routers.thaisamontenegro.rule=Host(`espacothaisamontenegro.com.br`)"
+        - "traefik.http.routers.thaisamontenegro.rule=Host(`lp.thaisamontenegro.com.br`)"
         - "traefik.http.routers.thaisamontenegro.entrypoints=websecure"
         - "traefik.http.routers.thaisamontenegro.tls.certresolver=letsencryptresolver"
         - "traefik.http.services.thaisamontenegro.loadbalancer.server.port=80"

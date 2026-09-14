@@ -12,7 +12,7 @@ Este pacote está completo e validado, mas foi montado com dados que precisam de
 
 - **Nome:** Espaço Thaisa Montenegro
 - **Razão social:** Thaisa Marques Montenegro Maia — CNPJ 24.783.727/0001-50
-- **Domínio de produção (placeholder, a confirmar):** `espacothaisamontenegro.com.br`
+- **Domínio de produção (placeholder, a confirmar):** `lp.thaisamontenegro.com.br`
 - **Tecnologia:** HTML, CSS e JavaScript estáticos — sem framework, sem processo de build.
 
 ## Estrutura de arquivos
