@@ -4,7 +4,7 @@ Este pacote está tecnicamente completo e passa em `scripts/validate.sh`. Os doi
 
 ## Importantes (o site funciona, mas fica incompleto ou impreciso sem isso)
 
-4. **Copy de "Áreas de atuação".** Os três itens (estética facial, estética corporal, formação e mentoria) estão no nível de categoria, deduzidos dos CNAEs do CNPJ — não inventei nomes de procedimentos específicos porque não tenho essa informação. Substituir pelos serviços reais que ela vende (nomes, e se fizer sentido, uma frase de posicionamento por serviço).
+4. **Copy de "Áreas de atuação" — parcial.** Um procedimento específico já foi confirmado e incluído em "Estética facial": micropigmentação de sobrancelhas. "Estética corporal" e "Formação e mentoria" continuam só no nível de categoria, e "Estética facial" pode ter outros procedimentos além da micropigmentação — não inventei mais nomes porque não tenho essa informação. Se ela quiser, dá para listar os demais serviços reais (nomes, e se fizer sentido, uma frase de posicionamento por serviço).
 
 ## Resolvido nesta rodada
 
